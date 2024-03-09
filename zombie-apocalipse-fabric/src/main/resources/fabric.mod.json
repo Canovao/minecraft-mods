@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "zombie-apocalipse",
+	"version": "${version}",
+	"name": "Zombie Apocalipse",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/zombie-apocalipse/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.zombie.ZombieApocalipse"
+		],
+		"client": [
+			"com.zombie.ZombieApocalipseClient"
+		],
+		"fabric-datagen": [
+			"com.zombie.ZombieApocalipseDataGenerator"
+		]
+	},
+	"mixins": [
+		"zombie-apocalipse.mixins.json",
+		{
+			"config": "zombie-apocalipse.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "0.96.4+1.20.4"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
