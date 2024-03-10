@@ -25,6 +25,7 @@ public class ModItems {
     public static final RegistryObject<Item> ZOMBIE_LUNG = ITEMS.register("zombie_lung", () -> new Item((new Item.Properties()).rarity(Rarity.RARE).food(ZOMBIE_LUNG_PROPERTIES)));
 
     public static final RegistryObject<Item> COIN = ITEMS.register("coin", () -> new Item((new Item.Properties()).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> COIN_PURSE = ITEMS.register("coin_purse", () -> new Item((new Item.Properties()).rarity(Rarity.UNCOMMON)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

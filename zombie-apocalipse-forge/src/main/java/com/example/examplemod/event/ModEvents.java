@@ -4,6 +4,7 @@ package com.example.examplemod.event;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.villager.ModVillagers;
+import com.mojang.logging.LogUtils;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
@@ -13,15 +14,17 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.slf4j.Logger;
 
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid = ExampleMod.MODID)
 public class ModEvents {
+    private static final Logger LOGGER = LogUtils.getLogger();
 
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event){
-        if (event.getType() == ModVillagers.APOCALIPSE_VILLAGER.get()) {
+        if (event.getType() == ModVillagers.APOCALIPSE_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             // Level 1

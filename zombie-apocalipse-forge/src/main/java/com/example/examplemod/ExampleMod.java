@@ -97,6 +97,7 @@ public class ExampleMod {
 
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.COIN);
+            event.accept(ModItems.COIN_PURSE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
