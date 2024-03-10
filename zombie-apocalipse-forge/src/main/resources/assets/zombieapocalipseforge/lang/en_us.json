@@ -1,0 +1,10 @@
+{
+  "item.zombieapocalipseforge.zombie_hearth": "Zombie Hearth",
+  "item.zombieapocalipseforge.zombie_brain": "Zombie Brain",
+  "item.zombieapocalipseforge.zombie_lung": "Zombie Lung",
+  "item.zombieapocalipseforge.coin": "Coin",
+
+  "block.zombieapocalipseforge.apocalipse_trading_station": "Apocalipse Trading Station",
+
+  "entity.minecraft.villager.zombieapocalipseforge.apocalipse_villager": "Apocalipse Villager"
+}

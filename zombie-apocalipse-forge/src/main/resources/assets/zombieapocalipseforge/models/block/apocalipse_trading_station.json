@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "zombieapocalipseforge:block/apocalipse_trading_station"
+  }
+}

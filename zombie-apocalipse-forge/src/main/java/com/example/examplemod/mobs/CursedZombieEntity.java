@@ -1,5 +1,6 @@
 package com.example.examplemod.mobs;
 
+import com.example.examplemod.item.ModItems;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.monster.Zombie;
@@ -61,15 +62,24 @@ public class CursedZombieEntity extends Zombie{
             new ItemStack(Items.GOLDEN_APPLE, 1)
     );
 
+    private static final List<ItemStack> guaranteedDropList = List.of(
+            new ItemStack(ModItems.ZOMBIE_HEARTH.get(), 1),
+            new ItemStack(ModItems.ZOMBIE_BRAIN.get(), 1)
+    );
 
     public CursedZombieEntity(EntityType<? extends Zombie> entity, Level level) {
         super(entity, level);
-        this.setHealth(this.getMaxHealth()/2);
+        setupCursedZombie();
     }
 
     public CursedZombieEntity(Level level) {
         super(level);
-        this.setHealth(this.getMaxHealth()/2);
+        setupCursedZombie();
+    }
+
+    private void setupCursedZombie(){
+        this.setHealth(this.getMaxHealth() / 2);
+        this.setSpeed(this.getSpeed() / 8);
     }
 
     @Override
@@ -81,8 +91,20 @@ public class CursedZombieEntity extends Zombie{
     protected void dropCustomDeathLoot(@NotNull DamageSource dmgSource, int intVal, boolean boolVal) {
         super.dropCustomDeathLoot(dmgSource, intVal, boolVal);
 
+        getGuaranteedLoot();
+
         if(getRandomLoot()){
            this.dropExperience();
+        }
+    }
+
+    private void getGuaranteedLoot(){
+        int randomChoice = random.nextInt(2);
+
+        if(randomChoice == 0){
+            spawnAtLocation(new ItemStack(ModItems.COIN.get(), 1));
+        } else {
+            spawnAtLocation(getRandomInList(guaranteedDropList));
         }
     }
 
