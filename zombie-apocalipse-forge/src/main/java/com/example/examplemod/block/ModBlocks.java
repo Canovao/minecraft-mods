@@ -20,8 +20,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ExampleMod.MODID);
 
-
-    public static final RegistryObject<Block> APOCALIPSE_TRADING_STATION = registerBlock("apocalipse_trading_station",
+    public static final RegistryObject<Block> APOCALIPSE_TRADING_STATION_BLOCK = registerBlock("apocalipse_trading_station",
             () -> new ApocalipseTradingStationBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -15,7 +15,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.APOCALIPSE_TRADING_STATION);
+        blockWithItem(ModBlocks.APOCALIPSE_TRADING_STATION_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

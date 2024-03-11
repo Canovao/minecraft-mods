@@ -111,7 +111,7 @@ public class ExampleMod {
         }
 
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
-            event.accept(ModBlocks.APOCALIPSE_TRADING_STATION);
+            event.accept(ModBlocks.APOCALIPSE_TRADING_STATION_BLOCK);
         }
     }
 
