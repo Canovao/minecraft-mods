@@ -155,8 +155,8 @@ public class ExampleMod {
             // 1 zumbi a cada ZOMBIE_SPAWNTIME * 2 segundos
             spawnZombie(event.getEntity().level(), event.getEntity(), ZOMBIE_SPAWNTIME * 2);
 
-            // 1 zumbi a cada ZOMBIE_SPAWNTIME * 6 segundos
-            spawnZombie(event.getEntity().level(), event.getEntity(), ZOMBIE_SPAWNTIME * 6);
+            // 1 zumbi a cada ZOMBIE_SPAWNTIME * 3 segundos
+            spawnZombie(event.getEntity().level(), event.getEntity(), ZOMBIE_SPAWNTIME * 3);
         }
     }
 
