@@ -42,7 +42,7 @@ public class TutorialMod {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
-            event.accept(ModBlocks.SOUND_BLOCK.get());
+            event.accept(ModBlocks.TRADING_STATION.get());
         }
     }
 

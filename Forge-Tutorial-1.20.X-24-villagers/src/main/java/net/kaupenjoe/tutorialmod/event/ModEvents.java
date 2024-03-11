@@ -26,12 +26,12 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
-        if(event.getType() == ModVillagers.SOUND_MASTER.get()) {
+        if(event.getType() == ModVillagers.TRADING_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 16),
-                    new ItemStack(ModBlocks.SOUND_BLOCK.get(), 1),
+                    new ItemStack(ModBlocks.TRADING_STATION.get(), 1),
                     16, 8, 0.02f));
         }
     }

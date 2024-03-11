@@ -17,13 +17,13 @@ public class ModVillagers {
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS =
             DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, TutorialMod.MOD_ID);
 
-    public static final RegistryObject<PoiType> SOUND_POI = POI_TYPES.register("sound_poi",
-            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.SOUND_BLOCK.get().getStateDefinition().getPossibleStates()),
+    public static final RegistryObject<PoiType> TRADING_STATION_POI = POI_TYPES.register("trading_station_poi",
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.TRADING_STATION.get().getStateDefinition().getPossibleStates()),
                     1, 1));
 
-    public static final RegistryObject<VillagerProfession> SOUND_MASTER =
-            VILLAGER_PROFESSIONS.register("soundmaster", () -> new VillagerProfession("soundmaster",
-                    holder -> holder.get() == SOUND_POI.get(), holder -> holder.get() == SOUND_POI.get(),
+    public static final RegistryObject<VillagerProfession> TRADING_MASTER =
+            VILLAGER_PROFESSIONS.register("tradingmaster", () -> new VillagerProfession("tradingmaster",
+                    holder -> holder.get() == TRADING_STATION_POI.get(), holder -> holder.get() == TRADING_STATION_POI.get(),
                     ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_ARMORER));
 
 

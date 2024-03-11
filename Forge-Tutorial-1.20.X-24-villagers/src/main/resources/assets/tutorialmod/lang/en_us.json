@@ -31,7 +31,7 @@
   "block.tutorialmod.end_stone_sapphire_ore": "Endstone Sapphire Ore",
   "block.tutorialmod.nether_sapphire_ore": "Nether Sapphire Ore",
 
-  "block.tutorialmod.sound_block": "Sound Block",
+  "block.tutorialmod.trading_station": "Trading station",
 
   "block.tutorialmod.sapphire_stairs": "Sapphire Stairs",
   "block.tutorialmod.sapphire_slab": "Sapphire Slab",
@@ -47,7 +47,7 @@
 
   "tooltip.tutorialmod.metal_detector.tooltip": "Finds valuables underground!",
 
-  "entity.minecraft.villager.tutorialmod.soundmaster": "Sound Master",
+  "entity.minecraft.villager.tutorialmod.tradingmaster": "Trading Master",
 
 
   "creativetab.tutorial_tab": "Sapphire Tutorial Tab"

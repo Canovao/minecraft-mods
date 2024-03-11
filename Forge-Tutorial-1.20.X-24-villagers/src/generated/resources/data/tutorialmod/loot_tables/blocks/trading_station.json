@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tutorialmod:sapphire_stairs"
+          "name": "tutorialmod:trading_station"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "tutorialmod:blocks/sapphire_stairs"
+  "random_sequence": "tutorialmod:blocks/trading_station"
 }

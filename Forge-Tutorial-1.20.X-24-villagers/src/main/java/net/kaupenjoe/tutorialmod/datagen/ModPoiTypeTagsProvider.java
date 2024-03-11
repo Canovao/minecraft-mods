@@ -19,6 +19,6 @@ public class ModPoiTypeTagsProvider extends PoiTypeTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(PoiTypeTags.ACQUIRABLE_JOB_SITE)
-                .addOptional(new ResourceLocation(TutorialMod.MOD_ID, "sound_poi"));
+                .addOptional(new ResourceLocation(TutorialMod.MOD_ID, "trading_station_poi"));
     }
 }

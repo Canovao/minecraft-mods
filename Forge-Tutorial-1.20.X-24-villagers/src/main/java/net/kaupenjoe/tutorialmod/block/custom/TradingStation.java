@@ -18,22 +18,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SoundBlock extends Block {
-    public SoundBlock(Properties pProperties) {
+public class TradingStation extends Block {
+    public TradingStation(Properties pProperties) {
         super(pProperties);
-    }
-
-    @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
-                                 Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        pLevel.playSound(pPlayer, pPos, SoundEvents.NOTE_BLOCK_DIDGERIDOO.get(), SoundSource.BLOCKS,
-                1f, 1f);
-        return InteractionResult.SUCCESS;
-    }
-
-    @Override
-    public void appendHoverText(ItemStack pStack, @Nullable BlockGetter pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
-        pTooltip.add(Component.literal("Makes sweet sounds when right-clicked!"));
-        super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
     }
 }
