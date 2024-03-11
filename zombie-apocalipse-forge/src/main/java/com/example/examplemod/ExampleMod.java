@@ -69,6 +69,16 @@ public class ExampleMod {
 
                             zombie.setPos(spawnX, playerY, spawnZ);
 
+                            while(zombie.onGround() || zombie.isFallFlying()){
+                                if (zombie.onGround()) {
+                                    zombie.setPos(zombie.getX(), zombie.getY() + 1, zombie.getZ());
+                                }
+
+                                if (zombie.isFallFlying()) {
+                                    zombie.setPos(zombie.getX(), zombie.getY() - 1, zombie.getZ());
+                                }
+                            }
+
                             level.addFreshEntity(zombie);
                             LOGGER.info("\tZombie: " + zombie);
 

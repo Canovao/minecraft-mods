@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+      "###",
+      "###",
+      "###"
+  ],
+  "key": {
+    "#": {
+      "item": "zombieapocalipseforge:coin"
+    }
+  },
+  "result": {
+    "item": "zombieapocalipseforge:coin_purse"
+  }
+}
