@@ -64,7 +64,8 @@ public class CursedZombieEntity extends Zombie{
 
     private static final List<ItemStack> guaranteedDropList = List.of(
             new ItemStack(ModItems.ZOMBIE_HEARTH.get(), 1),
-            new ItemStack(ModItems.ZOMBIE_BRAIN.get(), 1)
+            new ItemStack(ModItems.ZOMBIE_BRAIN.get(), 1),
+            new ItemStack(ModItems.ZOMBIE_LUNG.get(), 1)
     );
 
     public CursedZombieEntity(EntityType<? extends Zombie> entity, Level level) {

@@ -31,7 +31,7 @@ public class ExampleMod {
     public static final String MODID = "zombieapocalipseforge";
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Random random = new Random();
-    private static final long ZOMBIE_SPAWNTIME = 10000L;
+    private static final long ZOMBIE_SPAWNTIME = 15000L;
     private static final long ZOMBIE_SPAWN_DISTANCE = 10;
 
     public ExampleMod() {
@@ -117,20 +117,19 @@ public class ExampleMod {
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-    }
+    public void onServerStarting(ServerStartingEvent event) {}
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-        }
+        public static void onClientSetup(FMLClientSetupEvent event) {}
     }
 
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.FORGE) // Use FORGE bus for server-side events
     public static class ForgeModEvents {
+
+        private ForgeModEvents() {}
 
         private static void addStarterItems(Player player){
             if(player.getInventory().contains(new ItemStack(Items.WOODEN_SWORD, 1))){
@@ -149,20 +148,17 @@ public class ExampleMod {
 
             addStarterItems(event.getEntity());
 
-            // 1 zumbi a cada ZOMBIE_SPAWNTIME segundos
             spawnZombie(event.getEntity().level(), event.getEntity(), ZOMBIE_SPAWNTIME);
-
-            // 1 zumbi a cada ZOMBIE_SPAWNTIME * 2 segundos
-            spawnZombie(event.getEntity().level(), event.getEntity(), ZOMBIE_SPAWNTIME * 2);
-
-            // 1 zumbi a cada ZOMBIE_SPAWNTIME * 3 segundos
-            spawnZombie(event.getEntity().level(), event.getEntity(), ZOMBIE_SPAWNTIME * 3);
         }
     }
 
+    // TODO implementar lápides que spawnam zumbis do apocalipse perto delas, assim vai resolver uma parte do "fixme" abaixo
     // TODO implementar o villager que troca coins por itens uteis
     // TODO implementar um efeito no player que faz com que nao spawne inimigos em volta dele
     // TODO implementar um efeito que faz com que spawne o dobro de zumbis amaldiçoados em volta dele
     // TODO implementar quests
     // TODO implementar novos tipos de zumbis
+    // TODO implementar uma lança que tem um range alto e possa ser arremessada
+
+    // FIXME quando o player morre os zumbis spawnam perto do x:0 z:0 ao invés de spawnar perto da localização atual do player
 }
